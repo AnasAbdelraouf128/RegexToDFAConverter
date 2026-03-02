@@ -1,8 +1,42 @@
-# RegexToDFAConverter
+# 🔄 Regex to DFA Converter
 
-Final project for 3204 - Theory of Computation
+![Language](https://img.shields.io/badge/Language-[Your_Language_Here]-blue.svg)
+![Topic](https://img.shields.io/badge/Topic-Automata%20Theory-brightgreen.svg)
+![Topic](https://img.shields.io/badge/Topic-Compiler%20Design-orange.svg)
 
-No compiled version yet :(
+A robust computational tool designed to parse Regular Expressions (Regex) and systematically construct their equivalent Deterministic Finite Automata (DFA). 
+
+This project demonstrates the practical application of Automata Theory, translating abstract mathematical models into working code. It is an excellent resource for understanding the foundational steps behind how modern lexical analyzers and pattern-matching engines work under the hood.
+
+## 🧠 The Conversion Pipeline
+
+This engine processes a regular expression through several distinct algorithmic phases to achieve the final DFA:
+
+1. **Regex Parsing & Preprocessing:** * Formats the input string, inserting explicit concatenation operators where necessary.
+   * Converts the Infix regular expression into Postfix notation (often using the Shunting-Yard algorithm) to respect operator precedence (`*`, `|`, `()`, etc.).
+2. **NFA Construction (Thompson's Algorithm):** * Constructs a Nondeterministic Finite Automaton (NFA) with $\epsilon$-transitions from the Postfix expression.
+3. **DFA Conversion (Subset Construction):** * Applies the Powerset (Subset) Construction algorithm to convert the NFA into a Deterministic Finite Automaton (DFA), calculating $\epsilon$-closures and state transitions.
+4. **[Optional] DFA Minimization:**
+   * Optimizes the resulting DFA by merging equivalent states to create the most efficient state machine possible.
+
+## ✨ Key Features
+* **Standard Operator Support:** Handles core regex operators including Union (`|`), Concatenation (`.`), and Kleene Star (`*`).
+* **State Mapping:** Clearly tracks and outputs the transition table, mapping the generated states to their respective inputs.
+* **Algorithmic Transparency:** Built to clearly demonstrate the intermediate steps (Regex -> NFA -> DFA) rather than just functioning as a black box.
+
+## 🛠️ Technologies & Core Concepts
+* **Language:** `[Insert Language, e.g., Python 3.x / Java / C++]`
+* **Concepts:** Finite State Machines, Graph Theory, Recursive Descent Parsing, Set Theory.
+
+## 🚀 Getting Started
+
+### Prerequisites
+Make sure you have `[Insert requirement, e.g., Python 3.8+ or Java JDK 11+]` installed on your machine.
+
+### Installation
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/AnasAbdelraouf128/RegexToDFAConverter.git](https://github.com/AnasAbdelraouf128/RegexToDFAConverter.git)
 
 # Collaborators
 
