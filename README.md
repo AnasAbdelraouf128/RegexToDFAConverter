@@ -38,6 +38,22 @@ Make sure you have `[Insert requirement, e.g., Python 3.8+ or Java JDK 11+]` ins
    ```bash
    git clone [https://github.com/AnasAbdelraouf128/RegexToDFAConverter.git](https://github.com/AnasAbdelraouf128/RegexToDFAConverter.git)
 
+   💻 Usage Example
+Upon running the program, you will be prompted to enter a Regular Expression.
+
+Input:
+
+Plaintext
+(a|b)*abb
+
+Output:
+[Insert a sample of what your program outputs here. For example:
+- The Postfix string
+- The NFA states and transitions
+- The final DFA Transition Table showing States, Inputs, and Next States]
+
+If this project helped you understand Automata Theory or Compiler Design a little better, please consider giving it a ⭐!
+
 # Collaborators
 
 [Eslam Ahmed](https://github.com/illusorist)
