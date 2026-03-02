@@ -52,6 +52,55 @@ Output:
 - The NFA states and transitions
 - The final DFA Transition Table showing States, Inputs, and Next States]
 
+
+=========================================
+      REGEX TO DFA CONVERTER ENGINE      
+=========================================
+
+Enter Regular Expression: (a|b)*abb
+
+[1] Parsing Regex...
+    -> Infix:  (a|b)*abb
+    -> Postfix: ab|*a.b.b.
+
+[2] Constructing NFA (Thompson's Algorithm)...
+    -> NFA States Generated: 10
+    -> Epsilon Transitions Handled.
+
+[3] Converting to DFA (Subset Construction)...
+    -> Computing Epsilon Closures...
+    -> DFA States Generated: 4
+
+=========================================
+          DFA TRANSITION TABLE           
+=========================================
+Alphabet (Σ): {'a', 'b'}
+Start State : q0
+Accept State: {q3}
+
++-------------+-----------+-----------+
+| State       | Input 'a' | Input 'b' |
++-------------+-----------+-----------+
+| -> q0       |    q1     |    q0     |
+|    q1       |    q1     |    q2     |
+|    q2       |    q1     |    q3     |
+| * q3       |    q1     |    q0     |
++-------------+-----------+-----------+
+
+Legend: 
+(->) Start State
+(*)  Accepting State
+
+
+
+
+
+
+
+
+
+
+
 If this project helped you understand Automata Theory or Compiler Design a little better, please consider giving it a ⭐!
 
 # Collaborators
